@@ -42,11 +42,11 @@ docker run -d --name worker-sub  -p 8787:8787 -v /path/to/your/wrangler.toml:/ap
 在开发模式下，可以使用以下命令启动服务：
 安装`wranger`
 ```sh
-RUN npm install -g wrangler
+npm install -g wrangler
 ```
 安装依赖
 ```sh
-RUN npm install
+npm install
 ```
 启动服务
 ```sh
