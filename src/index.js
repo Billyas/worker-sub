@@ -625,6 +625,7 @@ async function KV(request, env, txt = 'ADD.txt', guest) {
 					---------------------------------------------------------------<br>
 					SUBAPI（订阅转换后端）: <strong>${subProtocol}://${subConverter}</strong><br>
 					SUBCONFIG（订阅转换配置文件）: <strong>${subConfig}</strong><br>
+					UA: <strong>${request.headers.get('User-Agent')}</strong><br>
 					---------------------------------------------------------------<br>
 					################################################################<br>
 					${FileName} 汇聚订阅编辑: 
