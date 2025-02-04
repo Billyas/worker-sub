@@ -14,7 +14,7 @@ docker build -t worker-sub .
 ### 部署容器
 使用以下命令部署容器，并挂载外部的 `wrangler.toml` 文件：
 ```sh
-docker run -d -p 8787:8787 -v /path/to/your/wrangler.toml:/app/wrangler.toml worker-sub
+docker run -d -p 8787:8787 -v /path/to/your/wrangler.toml:/app/wrangler.toml worker-sub --name=worker-sub
 ```
 其中：
 - `/path/to/your/wrangler.toml` 是你本地的 `wrangler.toml` 文件路径。
