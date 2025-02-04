@@ -1,7 +1,7 @@
 FROM node:lts
 
 RUN npm install -g wrangler
-RUN git clone https://github.com/Billyas/CF-Workers-SUB /app
+RUN git clone https://github.com/Billyas/worker-sub /app
 
 WORKDIR /app
 RUN npm install
