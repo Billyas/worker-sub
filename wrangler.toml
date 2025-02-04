@@ -1,0 +1,19 @@
+name = "worker-sub"
+main = "src/index.js"
+compatibility_date = "2025-01-24"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "KV"
+
+[vars]
+TOKEN = "auto"
+SUBCONFIG = "https://raw.githubusercontent.com/Billyas/multiCountry/main/ACL4SSR_Mini.ini"
+SUBNAME = "workersub"
+GUEST = "08ffe8"
+SUBAPI = "SUBAPI.fxxk.dedyn.io"
+
+[dev]
+ip = "0.0.0.0"
+port = 8787
+
