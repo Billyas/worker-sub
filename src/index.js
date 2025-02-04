@@ -1,4 +1,3 @@
-
 // 部署完成后在网址后面加上这个，获取自建节点和机场聚合节点，/?token=auto或/auto或
 
 let mytoken = 'auto';
@@ -643,11 +642,16 @@ async function KV(request, env, txt = 'ADD.txt', guest) {
 					<br>
 					<script>
 					function copyToClipboard(text, qrcode) {
-						navigator.clipboard.writeText(text).then(() => {
-							alert('已复制到剪贴板');
-						}).catch(err => {
-							console.error('复制失败:', err);
-						});
+						if (navigator.clipboard && navigator.clipboard.writeText) {
+							navigator.clipboard.writeText(text).then(() => {
+								alert('已复制到剪贴板');
+							}).catch(err => {
+								console.error('复制失败:', err);
+							});
+						} else {
+							console.warn('Clipboard API 不可用');
+						}
+					
 						const qrcodeDiv = document.getElementById(qrcode);
 						qrcodeDiv.innerHTML = '';
 						new QRCode(qrcodeDiv, {
