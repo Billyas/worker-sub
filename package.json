@@ -6,6 +6,6 @@
   },
   "private": true,
   "scripts": {
-    "start": "wrangler dev --log-level error"
+    "start": "wrangler dev --log-level info"
   }
 }

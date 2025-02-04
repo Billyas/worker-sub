@@ -1,10 +1,10 @@
 FROM node:lts
 
-RUN npm install -g wrangler
-RUN git clone https://github.com/Billyas/worker-sub /app
+COPY . /app
 
 WORKDIR /app
-RUN npm install
+RUN npm install -g wrangler --loglevel verbose
+RUN npm install --loglevel verbose
 
 EXPOSE 8787
 CMD ["npm", "run", "start"]
